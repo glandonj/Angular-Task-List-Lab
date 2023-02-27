@@ -58,4 +58,7 @@ completeTask(index:number){
   this.tasks.push(result);
  }
 
+ deleteTask(index:number){
+this.tasks.splice(index,1);
+ }
 }

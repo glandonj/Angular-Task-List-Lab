@@ -1,9 +1,22 @@
-<h1>To Do List</h1>
-<div *ngFor="let t of tasks; index as i">
-    <h3>{{ i + 1}}. {{ t.task }}</h3>
-    <p>Completed: {{ t.completed }}</p>
-    <button *ngIf="!t.completed" (click)="completeTask(i)">Complete Task</button>
-</div>
-<h2>Enter new task</h2>
-<input type="text" [(ngModel)]="newTask.task"/>
-<button (click)="addTask()">Add Task</button>
+<head>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<body align="center">
+    <h1>To Do List</h1>
+                    <div *ngFor="let t of tasks; index as i">
+                        <h3>
+                            <div *ngIf="t.completed"><s>{{ i + 1}}. {{ t.task }}</s></div>
+                            <div *ngIf="!t.completed">{{ i + 1}}. {{ t.task }}</div>
+                        </h3>
+                        <p>Completed: {{ t.completed }}</p>
+                        <button *ngIf="!t.completed" (click)="completeTask(i)">Complete Task</button>
+                        <button (click)="deleteTask(i)">x</button>
+                    </div>
+    <h2>Enter new task</h2>
+    <input type="text" [(ngModel)]="newTask.task"/>
+    <button (click)="addTask()">Add Task
+    </button>
+    <i class="fas fa-cloud"></i>
+    </body>
+
+

@@ -1,0 +1,18 @@
+
+body {
+Font-family: Open Sans; 
+Font-weight: 300; 
+Background: linear-gradient(to right, #f857a6, #ff5858); color:#bbb, #eee, #ff0000, #ff69b4, #ff1493
+
+}
+button {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 3px solid rgb(128, 0, 23); 
+  }
